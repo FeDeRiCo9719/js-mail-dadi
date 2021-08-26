@@ -18,18 +18,44 @@ Buon lavoro e buon divertimento! */
 
 // INPUT - numero random player e cpu
 //player
-var player =  Math.floor(Math.random() * 6) + 1;
-console.log( "Il tuo punteggio è " + player);
+// var player =  Math.floor(Math.random() * 6) + 1;
+// console.log( "Il tuo punteggio è " + player);
 //cpu
-var cpu = Math.floor(Math.random() * 6) + 1;
-console.log( "Il punteggio del tuo avversario è " + cpu);
+// var cpu = Math.floor(Math.random() * 6) + 1;
+// alert( "Il punteggio del tuo avversario è " + cpu);
+// console.log( "Il punteggio del tuo avversario è " + cpu);
 
-// PROGRAMMA - stabilire chi ha effettuato il punteggio più alto
-if (player > cpu) {
-    console.log("Hai vinto!");
-} else if (cpu > player) {
-    console.log("Hai perso!");
-} else {
-    console.log("Pareggio!");
+// // PROGRAMMA - stabilire chi ha effettuato il punteggio più alto
+// if (player > cpu) {
+//     // console.log("Hai vinto!");
+//     alert("Hai vinto!");
+// } else if (cpu > player) {
+//     // console.log("Hai perso!");
+//     alert("Hai perso!");
+// } else {
+//     // console.log("Pareggio!");
+//     alert("Pareggio!");
+// }
+
+
+// VARIANTE - giochino
+// INPUT
+alert("Scegli un numero, se il tuo punteggio sarà identico al punteggio CPU avrai vinto!")
+// Punteggio player 
+var player =  parseInt(prompt("inserisci un numero da 1 a 6"));
+while (player>6 || player<1){
+    alert("numero non valido, riprova");
+    player =  parseInt(prompt("inserisci un numero da 1 a 6"));
 }
+alert( "Il tuo punteggio è " + player);
+// Punteggio cpu 
+var cpu = Math.floor(Math.random() * 6) + 1;
+alert( "Il punteggio CPU uscito è " + cpu);
 
+// PROGRAMMA - stabilire se il tuo punteggio è identico al punteggio cpu
+if (player !== cpu) {
+    alert("Hai perso!");
+} else if (player === cpu) {
+    // console.log("Pareggio!");
+    alert("Hai vinto!");
+}
