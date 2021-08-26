@@ -45,7 +45,7 @@ alert("Scegli un numero, se il tuo punteggio sarà identico al punteggio CPU avr
 var player =  parseInt(prompt("inserisci un numero da 1 a 6"));
 while (player>6 || player<1){
     alert("numero non valido, riprova");
-    player =  parseInt(prompt("inserisci un numero da 1 a 6"));
+    player = parseInt(prompt("inserisci un numero da 1 a 6"));
 }
 alert( "Il tuo punteggio è " + player);
 // Punteggio cpu 
